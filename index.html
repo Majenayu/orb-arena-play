@@ -2293,8 +2293,8 @@
         font-size: 11px;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-DI0q8WY5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bs13a1-r.css">
+    <script type="module" crossorigin src="./assets/index-CYRwU9qX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D-9koY4c.css">
   </head>
   <body>
     <div id="game"></div>
@@ -2308,44 +2308,54 @@
         <button id="champfight">Challenge Majen</button>
         <button id="champbtn" class="ghost">Meet the champion</button>
       </div>
-      <div id="menu" class="panel center" hidden>
-        <h1>Orb Arena</h1>
-        <p class="sub">Fight heroes. Fire skills. Rule the arena.</p>
-        <div class="status">
-          <span class="lvl">Lv <b data-level>1</b></span>
-          <div class="xp"><div data-xpbar></div></div>
-          <span class="coins">&#9679; <b data-coins>0</b></span>
+      <div id="menu" class="lobby" hidden>
+        <header class="lb-top">
+          <div class="lb-profile">
+            <div class="lb-avatar" id="lbavatar" aria-hidden="true"></div>
+            <div class="lb-who">
+              <input id="nick" maxlength="16" autocomplete="off" spellcheck="false" aria-label="Nickname" />
+              <div class="status">
+                <span class="lvl">Lv <b data-level>1</b></span>
+                <div class="xp"><div data-xpbar></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="lb-brand"><h1>Orb Arena</h1><p class="sub">Fight heroes. Fire skills. Rule the arena.</p></div>
+          <div class="lb-cur"><span class="coins"><i class="coin" aria-hidden="true"></i><b data-coins>0</b></span></div>
+        </header>
+        <nav class="rail rail-l" aria-label="Rewards and shop">
+          <button class="tile" data-page="daily"><span class="ic">&#127873;</span><span class="tl">Daily</span><i class="dot"></i></button>
+          <button class="tile" data-page="quests"><span class="ic">&#128220;</span><span class="tl">Quests</span><i class="dot"></i></button>
+          <button class="tile" data-page="spin"><span class="ic">&#127922;</span><span class="tl">Lucky Wheel</span><i class="dot"></i></button>
+          <button class="tile" data-page="shop"><span class="ic">&#128722;</span><span class="tl">Shop</span></button>
+        </nav>
+        <section class="lb-stage">
+          <button class="lb-hero" id="lbhero" aria-label="Your hero. Open the Hero page"></button>
+          <div class="lb-plate" aria-hidden="true"></div>
+          <div class="lb-heroname" id="lbheroname"></div>
+        </section>
+        <nav class="rail rail-r" aria-label="Game modes and hero">
+          <button class="tile" data-page="loadout"><span class="ic">&#129466;</span><span class="tl">Hero</span></button>
+          <button class="tile" data-page="campaign"><span class="ic">&#9733;</span><span class="tl">Campaign</span></button>
+          <button class="tile" data-page="ranked"><span class="ic">&#127942;</span><span class="tl">Ranked</span></button>
+          <button class="tile" id="moretile" aria-expanded="false"><span class="ic">&#8943;</span><span class="tl mlabel">More</span><i class="dot"></i></button>
+        </nav>
+        <div class="grid moregrid" aria-label="More">
+          <button class="tile more" data-page="arenas"><span class="ic">&#9876;</span><span class="tl">Arenas</span></button>
+          <button class="tile more" data-page="collection"><span class="ic">&#10024;</span><span class="tl">Skills</span></button>
+          <button class="tile more" data-page="summons"><span class="ic">&#128054;</span><span class="tl">Summons</span></button>
+          <button class="tile more" data-page="dex"><span class="ic">&#128218;</span><span class="tl">Powerups</span></button>
+          <button class="tile more" data-page="bestiary"><span class="ic">&#128009;</span><span class="tl">Bestiary</span></button>
+          <button class="tile more" data-page="chests"><span class="ic">&#128230;</span><span class="tl">Chests</span></button>
+          <button class="tile more" data-page="guild"><span class="ic">&#128737;</span><span class="tl">Guilds</span></button>
+          <button class="tile more" data-page="training"><span class="ic">&#127919;</span><span class="tl">Training</span></button>
         </div>
-        <input id="nick" maxlength="16" autocomplete="off" spellcheck="false" aria-label="Nickname" />
-        <button id="play">Quick Play</button>
-        <div class="grid">
-          <button class="tile more" data-page="arenas"><span class="ic">&#9876;</span>Arenas</button>
-          <button class="tile" data-page="campaign"><span class="ic">&#9733;</span>Campaign</button>
-          <button class="tile" data-page="loadout"><span class="ic">&#129466;</span>Hero</button>
-          <button class="tile" data-page="shop"><span class="ic">&#128722;</span>Shop &amp; Market</button>
-          <button class="tile" data-page="daily">
-            <span class="ic">&#127873;</span>Daily<i class="dot"></i>
-          </button>
-          <button class="tile" data-page="quests">
-            <span class="ic">&#128220;</span>Quests<i class="dot"></i>
-          </button>
-          <button class="tile" data-page="spin"><span class="ic">&#127922;</span>Lucky Wheel<i class="dot"></i></button>
-          <button class="tile more" data-page="collection"><span class="ic">&#128220;</span>Skills</button>
-          <button class="tile more" data-page="summons"><span class="ic">&#128054;</span>Summons</button>
-          <button class="tile more" data-page="dex"><span class="ic">&#128218;</span>Powerups</button>
-          <button class="tile more" data-page="bestiary"><span class="ic">&#128009;</span>Bestiary</button>
-          <button class="tile" data-page="ranked"><span class="ic">&#127942;</span>Ranked</button>
-          <button class="tile" id="moretile" aria-expanded="false"><span class="ic">&#8943;</span><span class="mlabel">More</span><i class="dot"></i></button>
-          <button class="tile more" data-page="chests"><span class="ic">&#128230;</span>Chests</button>
-          <button class="tile more" data-page="guild"><span class="ic">&#128737;</span>Guilds</button>
-          <button class="tile more" data-page="training"><span class="ic">&#127919;</span>Training</button>
+        <div class="lb-play">
+          <div class="lb-mode"><b>Quick Play</b><span>Modes and arenas rotate every round</span></div>
+          <button id="play">Play</button>
+          <button id="practice" class="ghost">Practice offline</button>
         </div>
-        <button id="practice" class="ghost">Practice offline</button>
-        <div class="sub" style="font-size:11px;opacity:.7;margin-top:4px">Art: Fluent Emoji by Microsoft (MIT) &middot; icons from game-icons.net by Lorc, Delapouite and contributors (CC BY 3.0)</div>
-        <div class="controls" id="controls">
-          WASD / arrows: move &middot; Mouse: aim &middot; Click: shoot &middot; 1-5 (or Space / E): skills<br />Touch:
-          left stick moves, right stick aims and fires, buttons use skills
-        </div>
+        <div class="lb-foot">Art: Fluent Emoji by Microsoft (MIT) &middot; icons from game-icons.net by Lorc, Delapouite and contributors (CC BY 3.0)</div>
       </div>
       <div id="page" class="panel center" hidden>
         <div id="pagehead">
