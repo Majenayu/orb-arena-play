@@ -1,0 +1,1 @@
+var e=Object.defineProperty;var t=(r,o,a)=>o in r?e(r,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):r[o]=a;var s=(r,o,a)=>t(r,typeof o!="symbol"?o+"":o,a);import{B as m,b as i}from"./index-tdCjTwfd.js";import"./phaser-DIUF0PZB.js";class P extends m{constructor(){super(...arguments);s(this,"name","poki");s(this,"storage",i())}}export{P as PokiPlatform};
